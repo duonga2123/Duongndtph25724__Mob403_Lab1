@@ -43,11 +43,7 @@ public class MainActivityBai3 extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.btnLoad:
-                new Bai3(this, this).execute(url);
-                break;
-        }
+        new Bai3(this, this).execute(url);
     }
 
     @Override

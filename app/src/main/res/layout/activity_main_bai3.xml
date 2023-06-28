@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thread trong Android"
+        android:text="Bai 3"
         android:id="@+id/title"/>
     <ImageView
         android:layout_gravity="center"

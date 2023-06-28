@@ -10,22 +10,24 @@ import android.widget.TextView;
 
 
 public class MainActivityBai4 extends AppCompatActivity implements View.OnClickListener {
-    private EditText edtTime;
-    private Button btnRun;
+     EditText edtTime;
+     Button btnRun;
      TextView Result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_bai4);
-        edtTime = (EditText) findViewById(R.id.edt);
+        edtTime = findViewById(R.id.edt);
         Result = findViewById(R.id.tvRs);
-        btnRun = (Button) findViewById(R.id.btn);
+        btnRun = findViewById(R.id.btn);
         btnRun.setOnClickListener(this);
     }
 
     @Override
-    public void onClick(View view) {
-
+    public void onClick(View v) {
+        Bai4 bai4 = new Bai4(this, Result, edtTime);
+        String sleepTime = edtTime.getText().toString();
+        bai4.execute(sleepTime);
     }
 }
